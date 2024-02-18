@@ -1,4 +1,4 @@
-package org.plotnikov.test.test;
+package org.plotnikov.test;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

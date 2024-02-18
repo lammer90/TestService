@@ -1,4 +1,4 @@
-package org.plotnikov.test;
+package org.plotnikov.test.dao.entity;
 
 import lombok.Data;
 

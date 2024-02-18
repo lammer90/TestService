@@ -1,4 +1,4 @@
-package org.plotnikov.test;
+package org.plotnikov.test.service;
 
 import org.plotnikov.test.dao.UserRepository;
 import org.plotnikov.test.dao.entity.UserEntity;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class CustomUserDetailsService implements UserDetailsService {
+public class UserService implements UserDetailsService {
 
     @Autowired
     private UserRepository userRepository;

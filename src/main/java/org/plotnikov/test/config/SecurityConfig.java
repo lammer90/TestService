@@ -1,4 +1,4 @@
-package org.plotnikov.test;
+package org.plotnikov.test.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -20,15 +20,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http
-                .authorizeRequests()
+        http.csrf()
+                .disable()
+            .authorizeRequests()
                 .antMatchers("/hello").hasAnyRole("USER", "ADMIN")
                 .antMatchers("/admin").hasRole("ADMIN")
-                .and()
+            .and()
                 .formLogin()
                 .loginPage("/login")
                 .defaultSuccessUrl("/hello")
-                .and()
+            .and()
                 .logout()
                 .logoutUrl("/logout")
                 .logoutSuccessUrl("/login");
